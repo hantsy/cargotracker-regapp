@@ -1,2 +1,6 @@
 # cargotracker-regapp
-DDD Sample RegiterApp Client written in JavaFX
+
+[The original DDD sample RegisterApp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
+
+The new app is rewrittent in JavaFX and CDI(Weld) and is use for submitting handling events to the running [Jakarta EE Cargotracker backend system](https://github.com/hantsy/cargotracker).
+
