@@ -5,5 +5,5 @@
 This new app is rewritten for [Eclipse EE4J Cargotracker backend system](https://github.com/hantsy/cargotracker).
 
 * Rebuilding the whole UI with JavaFX 
-* Using CDI(Weld) as IOC container instead
-* The client and server communication is switched to Jaxrs
+* Using CDI(JBoss Weld) as IOC container
+* The client and server communication is switched to Jakarta Restful Service(JAX-RS)
