@@ -1,0 +1,14 @@
+org\eclipse\cargotrakcer\regapp\HelloApp.class
+org\eclipse\cargotrakcer\regapp\ui\PrimaryStageInitializer.class
+org\eclipse\cargotrakcer\regapp\Main.class
+org\eclipse\cargotrakcer\regapp\ui\CDIControllerFactory.class
+org\eclipse\cargotrakcer\regapp\ui\HandlingReportController.class
+org\eclipse\cargotrakcer\regapp\client\HandlingResponse$FAILED.class
+org\eclipse\cargotrakcer\regapp\client\HandlingReportServiceClient.class
+org\eclipse\cargotrakcer\regapp\client\HandlingReport.class
+module-info.class
+org\eclipse\cargotrakcer\regapp\ui\StageReadyEvent$1.class
+org\eclipse\cargotrakcer\regapp\client\HandlingResponse$OK.class
+org\eclipse\cargotrakcer\regapp\client\HandlingResponse.class
+org\eclipse\cargotrakcer\regapp\ui\FxWeaverProducer.class
+org\eclipse\cargotrakcer\regapp\ui\StageReadyEvent.class
