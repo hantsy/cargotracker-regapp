@@ -1,4 +1,4 @@
-package org.eclipse.cargotrakcer.regapp.ui;
+package org.eclipse.cargotrakcer.regapp.cdi;
 
 import javax.enterprise.util.AnnotationLiteral;
 import javax.inject.Qualifier;
@@ -15,5 +15,5 @@ import java.lang.annotation.Target;
 @Qualifier
 public @interface StageReadyEvent {
 
-    Annotation Literal = new AnnotationLiteral<StageReadyEvent>() {};
+   Annotation Literal = new AnnotationLiteral<StageReadyEvent>() {};
 }

@@ -3,9 +3,7 @@ package org.eclipse.cargotrakcer.regapp;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
-import org.eclipse.cargotrakcer.regapp.ui.PrimaryStageInitializer;
-import org.eclipse.cargotrakcer.regapp.ui.StageReadyEvent;
-import org.jboss.weld.bootstrap.spi.BeanDiscoveryMode;
+import org.eclipse.cargotrakcer.regapp.cdi.StageReadyEvent;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
 

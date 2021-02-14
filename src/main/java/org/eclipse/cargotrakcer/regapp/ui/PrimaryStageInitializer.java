@@ -3,6 +3,7 @@ package org.eclipse.cargotrakcer.regapp.ui;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
+import org.eclipse.cargotrakcer.regapp.cdi.StageReadyEvent;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;

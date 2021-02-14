@@ -1,4 +1,4 @@
-package org.eclipse.cargotrakcer.regapp.ui;
+package org.eclipse.cargotrakcer.regapp.cdi;
 
 import net.rgielen.fxweaver.core.FxWeaver;
 

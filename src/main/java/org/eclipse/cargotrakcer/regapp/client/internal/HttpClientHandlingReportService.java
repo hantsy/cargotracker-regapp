@@ -1,10 +1,13 @@
-package org.eclipse.cargotrakcer.regapp.client;
+package org.eclipse.cargotrakcer.regapp.client.internal;
+
+import org.eclipse.cargotrakcer.regapp.client.HandlingReport;
+import org.eclipse.cargotrakcer.regapp.client.HandlingReportService;
+import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpClient.Redirect;
@@ -19,9 +22,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @ApplicationScoped
-public class HandlingReportServiceClient {
+public class HttpClientHandlingReportService implements HandlingReportService {
 
-    private final static Logger LOGGER = Logger.getLogger(HandlingReportServiceClient.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(HttpClientHandlingReportService.class.getName());
 
     private final static String DEFAULT_SERVICE_URL = "http://localhost:8080/cargo-tracker/rest/handling/reports";
 
@@ -49,7 +52,7 @@ public class HandlingReportServiceClient {
         }
     }
 
-    public CompletableFuture<HandlingResponse> submitReport(HandlingReport report) throws MalformedURLException {
+    public CompletableFuture<HandlingResponse> submitReport(HandlingReport report) {
         // Create Jsonb and serialize
         Jsonb jsonb = JsonbBuilder.create();
 

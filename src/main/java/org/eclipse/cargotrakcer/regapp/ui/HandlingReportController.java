@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.eclipse.cargotrakcer.regapp.client.HandlingReport;
-import org.eclipse.cargotrakcer.regapp.client.HandlingReportServiceClient;
+import org.eclipse.cargotrakcer.regapp.client.HandlingReportService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -16,7 +16,7 @@ import java.time.Instant;
 public class HandlingReportController {
 
     @Inject
-    private HandlingReportServiceClient handlingReportServiceClient;
+    private HandlingReportService handlingReportService;
 
     @FXML
     private Button hello;
@@ -24,9 +24,9 @@ public class HandlingReportController {
     public HandlingReportController() {
     }
 
-    public void onSubmit() throws Exception {
+    public void onSubmit(ActionEvent actionEvent) throws Exception {
         var report = new HandlingReport();
-        this.handlingReportServiceClient.submitReport(report);
+        this.handlingReportService.submitReport(report);
     }
 
     public void onHello(ActionEvent actionEvent) {
