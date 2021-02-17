@@ -98,8 +98,4 @@ public class HandlingReportController {
                 })
                 .join();
     }
-
-    public void onHello(ActionEvent actionEvent) {
-        System.out.println("Hello World at @" + Instant.now());
-    }
 }
