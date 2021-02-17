@@ -17,7 +17,9 @@ This project is developed against the latest Java and JavaFX.
 
 ## Build 
 
-Build and run the application from the source codes.
+Clone the source codes from Github, open a terminal and switch to the root folder of the project. 
+
+Execute the following command to build and run the application.
 
 ```bash
 mvn clean compile exec:java
