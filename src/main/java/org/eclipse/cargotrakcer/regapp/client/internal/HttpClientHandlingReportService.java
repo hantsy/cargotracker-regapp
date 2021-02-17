@@ -64,7 +64,7 @@ public class HttpClientHandlingReportService implements HandlingReportService {
                                 .build(),
                         HttpResponse.BodyHandlers.ofString()
                 )
-                .thenApply(res -> res.statusCode() == 200 ? new HandlingResponse.OK() : new HandlingResponse.FAILED())
+                .thenApply(res -> res.statusCode() == 200 ? new HandlingResponse.OK() : new HandlingResponse.FAILED(res.body()))
                 .toCompletableFuture();
     }
 

@@ -8,5 +8,14 @@ sealed public interface HandlingResponse permits
     }
 
     final class FAILED implements HandlingResponse {
+        private final String message;
+
+        public FAILED(String message) {
+            this.message = message;
+        }
+
+        public String getMessage() {
+            return message;
+        }
     }
 }
