@@ -2,13 +2,13 @@
 
 [The original DDD sample regapp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
 
-This client app is rewritten for [eclipse-ee4j/cargotracker](https://github.com/hantsy/cargotracker).
+This app is rewritten for [eclipse-ee4j/cargotracker](https://github.com/hantsy/cargotracker).
 
 * Rebuilding the whole UI with JavaFX 
 * Using CDI(JBoss Weld) as IOC container
-* The client and server communication is switched to Jakarta Restful Service(JAX-RS)
+* The communication between client and server is switched to Jakarta Restful Service(JAX-RS)
 
-## Prerequites
+## Prerequisites
 
 This project is developed against the latest Java and JavaFX.
  
@@ -17,7 +17,7 @@ This project is developed against the latest Java and JavaFX.
 
 ## Build 
 
-Build and run the application from source codes.
+Build and run the application from the source codes.
 
 ```bash
 mvn clean compile exec:java
