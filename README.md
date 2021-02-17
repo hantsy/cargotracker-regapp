@@ -8,7 +8,20 @@ This client app is rewritten for [eclipse-ee4j/cargotracker](https://github.com/
 * Using CDI(JBoss Weld) as IOC container
 * The client and server communication is switched to Jakarta Restful Service(JAX-RS)
 
+## Prerequites
 
+This project is developed against the latest Java and JavaFX.
+ 
+* Java 15+
+* Apache Maven 3.6.x
+
+## Build 
+
+Build and run the application from source codes.
+
+```bash
+mvn clean compile exec:java
+```
 
 ## References
 
