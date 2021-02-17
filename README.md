@@ -2,7 +2,7 @@
 
 [The original DDD sample regapp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
 
-This app is rewritten for [eclipse-ee4j/cargotracker](https://github.com/hantsy/cargotracker).
+This app is rewritten for submitting handling events to the [cargotracker core system](https://github.com/hantsy/cargotracker) (forked from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
 
 * Rebuilding the whole UI with JavaFX 
 * Using CDI(JBoss Weld) as IOC container
