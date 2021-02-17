@@ -55,7 +55,7 @@ public class HandlingReportController {
     }
 
     //@PostConstruct
-    //@FXML
+    @FXML
     public void initialize() {
         eventTypeField.setItems(FXCollections.observableList(List.of(
                 "LOAD",

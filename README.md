@@ -1,8 +1,8 @@
 # CargoTracker RegApp
 
-[The original DDD sample RegisterApp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
+[The original DDD sample regapp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
 
-This new app is rewritten for [Eclipse EE4J Cargotracker backend system](https://github.com/hantsy/cargotracker).
+This client app is rewritten for [eclipse-ee4j/cargotracker](https://github.com/hantsy/cargotracker).
 
 * Rebuilding the whole UI with JavaFX 
 * Using CDI(JBoss Weld) as IOC container
@@ -21,3 +21,5 @@ This new app is rewritten for [Eclipse EE4J Cargotracker backend system](https:/
 * [JavaFX Tutorial: FXML and SceneBuilder](https://www.vojtechruzicka.com/javafx-fxml-scene-builder/)
 * [TestFX](https://github.com/TestFX/TestFX)
 * [Test Driven Development In JavaFX With TestFX](https://medium.com/information-and-technology/test-driven-development-in-javafx-with-testfx-66a84cd561e0)
+* [trishagee/jb-stock-client](https://github.com/trishagee/jb-stock-client)
+* [Spring Tips: JavaFX ](https://spring.io/blog/2019/01/16/spring-tips-javafx)
