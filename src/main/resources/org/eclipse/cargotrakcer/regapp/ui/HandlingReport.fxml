@@ -5,48 +5,52 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="25.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eclipse.cargotrakcer.regapp.ui.HandlingReportController">
+<VBox alignment="CENTER" spacing="25.0"
+      xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.eclipse.cargotrakcer.regapp.ui.HandlingReportController">
     <Label alignment="CENTER" contentDisplay="CENTER" text="CargoTracker Register Event" textAlignment="CENTER">
         <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Bold" size="24.0"/>
         </font>
     </Label>
     <GridPane id="form" alignment="CENTER_LEFT" hgap="20.0" prefHeight="350.0" prefWidth="600.0" vgap="20.0">
         <columnConstraints>
-            <ColumnConstraints halignment="RIGHT" minWidth="180.0" prefWidth="180.0" />
-            <ColumnConstraints />
+            <ColumnConstraints halignment="RIGHT" minWidth="180.0" prefWidth="180.0"/>
+            <ColumnConstraints/>
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
         </rowConstraints>
         <children>
-            <Label id="completionTimeLabel" text="Completion Time" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <DatePicker id="completionTimeField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label id="completionTimeLabel" text="Completion Time" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <DatePicker fx:id="completionTimeField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-            <Label id="trackingIdLabel" text="Tracking Id" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <TextField id="trackingIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label id="trackingIdLabel" text="Tracking Id" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="trackingIdField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-            <Label id="unLocodeLabel" text="Location" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <TextField id="unLocodeField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label id="unLocodeLabel" text="Location" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="unLocodeField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-            <Label id="eventTypeLabel" text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <ComboBox id="eventTypeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label id="eventTypeLabel" text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <ComboBox fx:id="eventTypeField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-            <Label id="voyageNumberLabel" text="VoyageNumber" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-            <TextField id="voyageNumberField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label id="voyageNumberLabel" text="VoyageNumber" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="voyageNumberField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-            <Button id="submitButton" onAction="#onSubmit" text="Submit Report" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Text id="message" text="Please fill all fields" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button id="submitButton" onAction="#onSubmit" text="Submit Report" GridPane.columnIndex="1"
+                    GridPane.rowIndex="5"/>
+            <Text fx:id="message" text="Please fill all fields" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
         </children>
     </GridPane>
-    <Label alignment="CENTER" text="Created by @hantsy" textAlignment="CENTER" />
+    <Label alignment="CENTER" text="Created by @hantsy" textAlignment="CENTER"/>
     <padding>
-        <Insets bottom="25.0" left="50.0" right="50.0" top="25.0" />
+        <Insets bottom="25.0" left="50.0" right="50.0" top="25.0"/>
     </padding>
 </VBox>

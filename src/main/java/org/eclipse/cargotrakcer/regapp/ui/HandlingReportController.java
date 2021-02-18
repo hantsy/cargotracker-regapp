@@ -1,10 +1,11 @@
 package org.eclipse.cargotrakcer.regapp.ui;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -15,7 +16,6 @@ import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import java.time.Instant;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -29,9 +29,6 @@ public class HandlingReportController {
 
     @Inject
     private HandlingReportService handlingReportService;
-
-    @FXML
-    private Button submitButton;
 
     @FXML
     private DatePicker completionTimeField;
@@ -55,19 +52,24 @@ public class HandlingReportController {
     }
 
     @PostConstruct
-    //@FXML
-    //public void initialize() {
     public void init() {
-        eventTypeField.setItems(FXCollections.observableList(List.of(
+        LOGGER.config("calling @PostConstruct method.");
+    }
+
+    @FXML
+    private void initialize() {
+        LOGGER.log(Level.INFO, "calling @FXML initialize method.");
+        eventTypeField.getItems().addAll(
                 "LOAD",
                 "UNLOAD",
                 "RECEIVE",
                 "CLAIM",
                 "CUSTOMS"
-        )));
+        );
     }
 
-    public void onSubmit(ActionEvent actionEvent) throws Exception {
+    @FXML
+    private void onSubmit(ActionEvent actionEvent) throws Exception {
         var completionTime = completionTimeField.getValue();
         var trackingId = trackingIdField.getText();
         var eventType = eventTypeField.getValue();
