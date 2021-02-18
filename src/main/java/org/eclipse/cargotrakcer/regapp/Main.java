@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class Main extends Application {
     private final static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
-    static WeldContainer container;
+    WeldContainer container;
 
     public static void main(String[] args) {
         launch(args);
@@ -21,8 +21,8 @@ public class Main extends Application {
 
     @Override
     public void stop() throws Exception {
-        container.shutdown();
         Platform.exit();
+        container.shutdown();
     }
 
     @Override
