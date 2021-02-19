@@ -47,11 +47,12 @@ public class HandlingReportController {
     private Text message;
 
     public HandlingReportController() {
+        LOGGER.log(Level.INFO, "calling constructor method.");
     }
 
     @PostConstruct
     public void init() {
-        LOGGER.config("calling @PostConstruct method.");
+        LOGGER.log(Level.INFO, "calling @PostConstruct method.");
     }
 
     @FXML
@@ -67,7 +68,7 @@ public class HandlingReportController {
     }
 
     @FXML
-    private void onSubmit(ActionEvent actionEvent) throws Exception {
+    private void onSubmit() {
         var completionTime = completionTimeField.getValue();
         var trackingId = trackingIdField.getText();
         var eventType = eventTypeField.getValue();

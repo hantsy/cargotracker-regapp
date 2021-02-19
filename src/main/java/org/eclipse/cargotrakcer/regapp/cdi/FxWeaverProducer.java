@@ -1,8 +1,10 @@
 package org.eclipse.cargotrakcer.regapp.cdi;
 
+import javafx.util.Callback;
 import net.rgielen.fxweaver.core.FxWeaver;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,12 +15,15 @@ public class FxWeaverProducer {
 
     @Produces
     FxWeaver fxWeaver(CDIControllerFactory callback) {
-        var fxWeaver = new FxWeaver(callback,
-                () -> {
-                    LOGGER.log(Level.ALL, "FxWeaver shutdown hook.");
-                }
+        var fxWeaver = new FxWeaver((Callback<Class<?>, Object>)callback,
+                () -> LOGGER.log(Level.INFO, "calling FxWeaver shutdown hook")
         );
 
         return fxWeaver;
+    }
+
+    public void destroyFxWeaver(@Disposes FxWeaver fxWeaver) {
+        LOGGER.log(Level.INFO, "destroying FxWeaver bean...");
+        fxWeaver.shutdown();
     }
 }

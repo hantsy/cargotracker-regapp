@@ -13,7 +13,8 @@ import java.util.logging.Logger;
 public class Main extends Application {
     private final static Logger LOGGER = Logger.getLogger(Main.class.getName());
 
-    WeldContainer container;
+    private Weld weld;
+    private WeldContainer container;
 
     public static void main(String[] args) {
         launch(args);
@@ -21,15 +22,12 @@ public class Main extends Application {
 
     @Override
     public void stop() throws Exception {
-        Platform.exit();
-        container.shutdown();
+        weld.shutdown();
     }
 
     @Override
     public void init() throws Exception {
-        Weld weld = new Weld();
-//                .setBeanDiscoveryMode(BeanDiscoveryMode.ANNOTATED)
-//                .addPackage(true, Main.class);
+        weld = new Weld();
         container = weld.initialize();
     }
 
