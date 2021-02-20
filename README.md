@@ -8,6 +8,8 @@ This app is used for submitting handling events to the [cargotracker core system
 * Using CDI(JBoss Weld) as IOC container
 * The communication between client and server is switched to Jakarta Restful Service(JAX-RS)
 
+![preview](./preview.png)
+
 ## Prerequisites
 
 This project is developed against the latest Java and JavaFX.
