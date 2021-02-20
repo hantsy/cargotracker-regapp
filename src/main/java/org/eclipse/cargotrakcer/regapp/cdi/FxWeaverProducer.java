@@ -15,7 +15,7 @@ public class FxWeaverProducer {
 
     @Produces
     FxWeaver fxWeaver(CDIControllerFactory callback) {
-        var fxWeaver = new FxWeaver((Callback<Class<?>, Object>)callback,
+        var fxWeaver = new FxWeaver((Callback<Class<?>, Object>) callback,
                 () -> LOGGER.log(Level.INFO, "calling FxWeaver shutdown hook")
         );
 

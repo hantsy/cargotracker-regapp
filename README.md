@@ -50,3 +50,6 @@ mvn clean compile exec:java
 * [trishagee/jb-stock-client](https://github.com/trishagee/jb-stock-client)
 
 * [Spring Tips: JavaFX ](https://spring.io/blog/2019/01/16/spring-tips-javafx)
+
+* [Testing CDI Beans and the Persistence Layer Under Java SE](https://in.relation.to/2019/01/23/testing-cdi-beans-and-persistence-layer-under-java-se/)
+* [Weld JUnit 5 Extensions](https://github.com/weld/weld-junit/blob/master/junit5/README.md)

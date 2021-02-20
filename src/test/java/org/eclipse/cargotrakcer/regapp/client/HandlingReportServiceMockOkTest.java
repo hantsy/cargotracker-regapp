@@ -42,7 +42,7 @@ class HandlingReportServiceMockOkTest {
     HandlingReportService handlingReportService;
 
     @Test
-    void testHandlingReportServiceExists() throws ExecutionException, InterruptedException {
+    void testOK() throws ExecutionException, InterruptedException {
         HandlingResponse handlingResponse = handlingReportService.submitReport(new HandlingReport()).get();
         assertThat(handlingResponse).isInstanceOf(HandlingResponse.OK.class);
         assertThat(handlingResponse.toString()).isEqualTo("OK");

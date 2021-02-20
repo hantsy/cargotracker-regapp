@@ -8,6 +8,9 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import javax.json.bind.JsonbConfig;
+import javax.json.bind.serializer.JsonbSerializer;
+import javax.json.bind.serializer.SerializationContext;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpClient.Redirect;
@@ -54,7 +57,7 @@ public class HttpClientHandlingReportService implements HandlingReportService {
 
     public CompletableFuture<HandlingResponse> submitReport(HandlingReport report) {
         // Create Jsonb and serialize
-        Jsonb jsonb = JsonbBuilder.create();
+        Jsonb jsonb = JsonbBuilder.create(new JsonbConfig().withNullValues(false));
 
         return this.client
                 .sendAsync(HttpRequest.newBuilder()
@@ -64,7 +67,7 @@ public class HttpClientHandlingReportService implements HandlingReportService {
                                 .build(),
                         HttpResponse.BodyHandlers.ofString()
                 )
-                .thenApply(res -> res.statusCode() == 200 ? new HandlingResponse.OK() : new HandlingResponse.FAILED(res.body()))
+                .thenApply(res -> res.statusCode() == 202 ? new HandlingResponse.OK() : new HandlingResponse.FAILED(res.body()))
                 .toCompletableFuture();
     }
 

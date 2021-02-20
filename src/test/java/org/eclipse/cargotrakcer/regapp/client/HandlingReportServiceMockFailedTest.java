@@ -41,7 +41,7 @@ class HandlingReportServiceMockFailedTest {
     HandlingReportService handlingReportService;
 
     @Test
-    void testHandlingReportServiceExists() throws ExecutionException, InterruptedException {
+    void testFailed() throws ExecutionException, InterruptedException {
         HandlingResponse handlingResponse = handlingReportService.submitReport(new HandlingReport()).get();
         assertThat(handlingResponse).isInstanceOf(HandlingResponse.FAILED.class);
 

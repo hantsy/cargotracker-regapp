@@ -6,8 +6,8 @@
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" spacing="25.0"
-      xmlns="http://javafx.com/javafx/11.0.2"
-      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.eclipse.cargotrakcer.regapp.ui.HandlingReportController">
     <Label alignment="CENTER" contentDisplay="CENTER" text="CargoTracker Register Event" textAlignment="CENTER">
         <font>

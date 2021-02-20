@@ -14,7 +14,9 @@ import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.spi.CDI;
 import javax.inject.Inject;
+import java.net.ConnectException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
@@ -75,6 +77,11 @@ public class HandlingReportController {
         var unLocode = unLocodeField.getText();
         var voyageNumber = voyageNumberField.getText();
 
+        //Jsonb has no option to remove empty values.
+        if (null != voyageNumber && "".equals(voyageNumber.trim())) {
+            voyageNumber = null;
+        }
+
         var report = HandlingReport.builder()
                 .completionTime(completionTime.atTime(LocalTime.now()).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")))
                 .eventType(eventType)
@@ -84,7 +91,11 @@ public class HandlingReportController {
                 .build();
         LOGGER.log(Level.INFO, "submitting report: {0}", report);
         // TODO validate report data.
-        this.handlingReportService.submitReport(report)
+        //
+        // CDI injection does not work.
+        // see issue: https://github.com/hantsy/cargotracker-regapp/issues/2
+        HandlingReportService handlingReportService = CDI.current().select(HandlingReportService.class).get();
+        handlingReportService.submitReport(report)
                 .thenAccept(handlingResponse -> {
 
                     if (handlingResponse instanceof HandlingResponse.OK) {
@@ -96,6 +107,14 @@ public class HandlingReportController {
                         message.setFill(Color.RED);
                     }
 
+                })
+                .exceptionally(e -> {
+                    LOGGER.log(Level.WARNING, "exception caught: {0}", e.getMessage());
+                    if (e instanceof ConnectException) {
+                        message.setText("Connection error");
+                        message.setFill(Color.RED);
+                    }
+                    return null;
                 })
                 .join();
     }
