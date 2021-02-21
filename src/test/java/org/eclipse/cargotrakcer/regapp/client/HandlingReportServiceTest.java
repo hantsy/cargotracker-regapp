@@ -43,7 +43,7 @@ class HandlingReportServiceTest {
     @Test
     void testOK() throws Exception {
         stubFor(post(urlEqualTo("/cargo-tracker/rest/handling/reports"))
-                .willReturn(status(200)));
+                .willReturn(status(202)));
 
         assertThat(handlingReportService.submitReport(new HandlingReport()).get().toString()).isEqualTo("OK");
     }

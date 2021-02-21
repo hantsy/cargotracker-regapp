@@ -22,15 +22,18 @@ public class PrimaryStageInitializer {
     @Inject
     FxWeaver fxWeaver;
 
-//    @Inject
-//    CDIControllerFactory controllerFactory;
+    @Inject
+    CDIControllerFactory controllerFactory;
 
     public void onInitialized(@Observes @StageReadyEvent Stage stage) throws IOException {
         LOGGER.log(Level.INFO, "Observes StageReadyEvent: {0}", stage);
         stage.setTitle("Incident Logging Application");
-        Parent root = fxWeaver.loadView(HandlingReportController.class);
-//        var loader = new FXMLLoader(HandlingReportController.class.getResource("HandlingReport.fxml"));
+
+//        var loader = new FXMLLoader();
 //        loader.setControllerFactory(controllerFactory);
+//        var location = HandlingReportController.class.getResource("HandlingReport.fxml");
+//        stage.setScene(new Scene( loader.load(location.openStream()), 800, 600));
+        Parent root = fxWeaver.loadView(HandlingReportController.class);
         stage.setScene(new Scene(root, 800, 600));
         stage.show();
     }

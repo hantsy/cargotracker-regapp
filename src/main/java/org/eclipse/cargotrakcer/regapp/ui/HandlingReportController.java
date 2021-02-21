@@ -1,6 +1,5 @@
 package org.eclipse.cargotrakcer.regapp.ui;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -71,6 +70,7 @@ public class HandlingReportController {
 
     @FXML
     private void onSubmit() {
+        LOGGER.log(Level.INFO, "injected HandlingReportService: {0}", this.handlingReportService);
         var completionTime = completionTimeField.getValue();
         var trackingId = trackingIdField.getText();
         var eventType = eventTypeField.getValue();
@@ -110,8 +110,10 @@ public class HandlingReportController {
                 })
                 .exceptionally(e -> {
                     LOGGER.log(Level.WARNING, "exception caught: {0}", e.getMessage());
-                    if (e instanceof ConnectException) {
-                        message.setText("Connection error");
+                    if (e instanceof ConnectException || e.getCause() instanceof ConnectException) {
+                        LOGGER.info("Connection failed.");
+                        message.setText("Connection error, please check if 'HANDLING_REPORT_SERVICE_URL' is set \n" +
+                                "when submitting to a remote host.");
                         message.setFill(Color.RED);
                     }
                     return null;
