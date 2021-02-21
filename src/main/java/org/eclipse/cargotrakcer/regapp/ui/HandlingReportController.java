@@ -10,6 +10,7 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.eclipse.cargotrakcer.regapp.client.HandlingReport;
 import org.eclipse.cargotrakcer.regapp.client.HandlingReportService;
 import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
+import org.eclipse.cargotrakcer.regapp.util.DateUtil;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Dependent;
@@ -82,7 +83,7 @@ public class HandlingReportController {
         }
 
         var report = HandlingReport.builder()
-                .completionTime(completionTime.atTime(LocalTime.now()).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")))
+                .completionTime(DateUtil.toString(completionTime))
                 .eventType(eventType)
                 .trackingId(trackingId)
                 .unLocode(unLocode)
