@@ -18,6 +18,7 @@
         <columnConstraints>
             <ColumnConstraints halignment="RIGHT" minWidth="180.0" prefWidth="180.0"/>
             <ColumnConstraints/>
+            <ColumnConstraints/>
         </columnConstraints>
         <rowConstraints>
             <RowConstraints/>
@@ -46,7 +47,8 @@
 
             <Button id="submitButton" onAction="#onSubmit" text="Submit Report" GridPane.columnIndex="1"
                     GridPane.rowIndex="5"/>
-            <Text fx:id="message" text="Please fill all fields" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+            <Text fx:id="message" text="Please fill all fields" GridPane.columnIndex="1" GridPane.rowIndex="6"
+                  GridPane.columnSpan="2"/>
         </children>
     </GridPane>
     <Label alignment="CENTER" text="Created by @hantsy" textAlignment="CENTER"/>

@@ -12,8 +12,7 @@ import org.eclipse.cargotrakcer.regapp.client.HandlingReportService;
 import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.spi.CDI;
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 import java.net.ConnectException;
 import java.time.LocalTime;
@@ -21,7 +20,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@ApplicationScoped
+@Dependent
 @FxmlView("HandlingReport.fxml")
 public class HandlingReportController {
     private final static Logger LOGGER = Logger.getLogger(HandlingReportController.class.getName());
@@ -94,8 +93,11 @@ public class HandlingReportController {
         //
         // CDI injection does not work.
         // see issue: https://github.com/hantsy/cargotracker-regapp/issues/2
-        HandlingReportService handlingReportService = CDI.current().select(HandlingReportService.class).get();
-        handlingReportService.submitReport(report)
+        //
+        // HandlingReportService handlingReportService = CDI.current().select(HandlingReportService.class).get();
+        //
+        // declares Controller as @Dependent resolved this issue.
+        this.handlingReportService.submitReport(report)
                 .thenAccept(handlingResponse -> {
 
                     if (handlingResponse instanceof HandlingResponse.OK) {
