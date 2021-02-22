@@ -24,7 +24,9 @@ public class PrimaryStageInitializer {
         LOGGER.log(Level.INFO, "observed StageReadyEvent: {0}", stage);
         stage.setTitle("Incident Logging Application");
         Parent root = fxWeaver.loadView(HandlingReportController.class);
-        stage.setScene(new Scene(root, 800, 600));
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(this.getClass().getResource("/style.css").toExternalForm());
+        stage.setScene(scene);
         stage.show();
     }
 }
