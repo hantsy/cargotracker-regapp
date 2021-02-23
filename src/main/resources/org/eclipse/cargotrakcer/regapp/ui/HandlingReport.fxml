@@ -19,22 +19,22 @@
             <RowConstraints/>
         </rowConstraints>
         <children>
-            <ImageView fx:id="title_img" fitHeight="64.0" fitWidth="64.0" GridPane.rowSpan="2" GridPane.columnIndex="0"
+            <ImageView fx:id="title_img" fitHeight="76.0" fitWidth="76.0" GridPane.rowSpan="2" GridPane.columnIndex="0"
                        GridPane.rowIndex="0">
                 <image>
                     <Image url="/logo.png"/>
                 </image>
             </ImageView>
-            <Label  textFill="darkgray" contentDisplay="LEFT" text="CargoTracker" GridPane.columnIndex="1"
+            <Label textFill="darkgray" text="CargoTracker" GridPane.columnIndex="1"
                    GridPane.rowIndex="0">
                 <font>
                     <Font name="System Bold" size="32.0"/>
                 </font>
             </Label>
-            <Label contentDisplay="LEFT" text="Incident Logging Application" GridPane.columnIndex="1"
+            <Label text="Incident Logging Application" GridPane.columnIndex="1"
                    GridPane.rowIndex="1">
                 <font>
-                    <Font  name="System Bold" size="24.0"/>
+                    <Font name="System Bold" size="24.0"/>
                 </font>
             </Label>
         </children>

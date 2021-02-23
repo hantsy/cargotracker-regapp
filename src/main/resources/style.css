@@ -1,12 +1,15 @@
 #pane{
-    -fx-background-image: url("./cargo-bg.jpg");
+    -fx-background-image: url("./cargo_bg_blur.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: 800 600;
     -fx-background-position: center center;
-    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
 }
 
 #form {
     -fx-background-color: rgba(248, 248, 248, 0.9);
     -fx-background-radius: 5;
+}
+
+#title_img {
+    -fx-effect: dropshadow(gaussian, darkgray, 50, 0.5, 5, 5);
 }
