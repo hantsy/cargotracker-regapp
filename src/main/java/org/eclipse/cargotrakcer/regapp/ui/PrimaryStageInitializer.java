@@ -2,6 +2,7 @@ package org.eclipse.cargotrakcer.regapp.ui;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import org.eclipse.cargotrakcer.regapp.cdi.StageReadyEvent;
@@ -22,6 +23,7 @@ public class PrimaryStageInitializer {
 
     public void onInitialized(@Observes @StageReadyEvent Stage stage) throws IOException {
         LOGGER.log(Level.INFO, "observed StageReadyEvent: {0}", stage);
+        stage.getIcons().add(new Image("/logo32.png"));
         stage.setTitle("Incident Logging Application");
         Parent root = fxWeaver.loadView(HandlingReportController.class);
         Scene scene = new Scene(root, 800, 600);
