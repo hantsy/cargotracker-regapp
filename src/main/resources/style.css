@@ -7,6 +7,6 @@
 }
 
 #form {
-    -fx-background-color: white;
-    -fx-opacity: 0.9;
+    -fx-background-color: rgba(248, 248, 248, 0.9);
+    -fx-background-radius: 5;
 }
