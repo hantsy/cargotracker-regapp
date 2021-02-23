@@ -12,7 +12,7 @@
 
     <GridPane alignment="CENTER_LEFT" hgap="24.0" vgap="4.0">
         <columnConstraints>
-            <ColumnConstraints halignment="RIGHT" minWidth="200.0" prefWidth="200.0"/>
+            <ColumnConstraints halignment="RIGHT" minWidth="220.0" prefWidth="220.0"/>
             <ColumnConstraints/>
         </columnConstraints>
         <rowConstraints>
