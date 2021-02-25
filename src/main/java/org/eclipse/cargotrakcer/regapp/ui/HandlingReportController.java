@@ -11,6 +11,7 @@ import org.eclipse.cargotrakcer.regapp.client.HandlingReport;
 import org.eclipse.cargotrakcer.regapp.client.HandlingReportService;
 import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 import org.eclipse.cargotrakcer.regapp.util.DateUtil;
+import tornadofx.control.DateTimePicker;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Dependent;
@@ -30,7 +31,7 @@ public class HandlingReportController {
     private HandlingReportService handlingReportService;
 
     @FXML
-    private DatePicker completionTimeField;
+    private DateTimePicker completionTimeField;
 
     @FXML
     private TextField trackingIdField;
@@ -71,7 +72,7 @@ public class HandlingReportController {
     @FXML
     private void onSubmit() {
         LOGGER.log(Level.INFO, "injected HandlingReportService: {0}", this.handlingReportService);
-        var completionTime = completionTimeField.getValue();
+        var completionTime = completionTimeField.getDateTimeValue();
         var trackingId = trackingIdField.getText();
         var eventType = eventTypeField.getValue();
         var unLocode = unLocodeField.getText();

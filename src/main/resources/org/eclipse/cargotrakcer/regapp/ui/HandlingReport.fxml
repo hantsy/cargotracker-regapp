@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-
-<?import javafx.scene.Group?>
+<?import tornadofx.control.DateTimePicker?>
 <VBox id="pane" alignment="CENTER" spacing="25.0" xmlns="http://javafx.com/javafx/11.0.2"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eclipse.cargotrakcer.regapp.ui.HandlingReportController">
 
@@ -58,7 +57,7 @@
         </rowConstraints>
         <children>
             <Label id="completionTimeLabel" text="Completion Time" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-            <DatePicker fx:id="completionTimeField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <DateTimePicker fx:id="completionTimeField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
             <Label id="trackingIdLabel" text="Tracking Id" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
             <TextField fx:id="trackingIdField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
@@ -92,7 +91,7 @@
                     <Image url="/t.png"/>
                 </image>
             </ImageView>
-            <Text text="\@hantsy" fill="c0c0c0" >
+            <Text text="\@hantsy" fill="c0c0c0">
             </Text>
         </children>
     </HBox>
