@@ -84,15 +84,15 @@
                     <Image url="/g.png"/>
                 </image>
             </ImageView>
-            <Text text="hantsy/cargotracker-regapp" fill="c0c0c0">
-            </Text>
+            <Hyperlink fx:id="githubLink" text="hantsy/cargotracker-regapp" textFill="c0c0c0">
+            </Hyperlink>
             <ImageView fx:id="t_img" fitHeight="32.0" fitWidth="32.0">
                 <image>
                     <Image url="/t.png"/>
                 </image>
             </ImageView>
-            <Text text="\@hantsy" fill="c0c0c0">
-            </Text>
+            <Hyperlink fx:id="twitterLink" text="\@hantsy" textFill="c0c0c0">
+            </Hyperlink>
         </children>
     </HBox>
     <padding>
