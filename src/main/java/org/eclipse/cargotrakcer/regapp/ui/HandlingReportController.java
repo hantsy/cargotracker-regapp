@@ -1,11 +1,7 @@
 package org.eclipse.cargotrakcer.regapp.ui;
 
-import com.sun.javafx.application.HostServicesDelegate;
-import javafx.application.HostServices;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
@@ -24,14 +20,11 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.net.URI;
-import java.net.URISyntaxException;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Dependent
+@Dependent// this is a must, set to ApplicationScoped does not work.
 @FxmlView("HandlingReport.fxml")
 public class HandlingReportController {
     private final static Logger LOGGER = Logger.getLogger(HandlingReportController.class.getName());
