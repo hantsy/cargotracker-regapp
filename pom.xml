@@ -11,8 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>21</maven.compiler.release>
-        <weld.version>5.1.1.SP2</weld.version>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <weld.version>3.1.6.Final</weld.version>
         <javafx.version>21</javafx.version>
     </properties>
 
