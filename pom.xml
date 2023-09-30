@@ -11,10 +11,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-        <weld.version>3.1.6.Final</weld.version>
-        <javafx.version>16</javafx.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <weld.version>5.1.1.SP2</weld.version>
+        <javafx.version>21</javafx.version>
     </properties>
 
     <dependencyManagement>
@@ -92,7 +91,7 @@
         <dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-junit5</artifactId>
-            <version>2.0.2.Final</version>
+            <version>4.0.0.Final</version>
             <scope>test</scope>
         </dependency>
         <dependency>
