@@ -14,8 +14,8 @@ This app is used for submitting handling events to the [cargotracker core system
 
 This project is developed against the latest Java and JavaFX.
 
-* Java 15+
-* Apache Maven 3.6.x
+* Java 21
+* Apache Maven 3.9.x
 
 ## Build 
 
