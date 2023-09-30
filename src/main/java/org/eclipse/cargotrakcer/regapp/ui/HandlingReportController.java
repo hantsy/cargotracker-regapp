@@ -13,9 +13,9 @@ import org.eclipse.cargotrakcer.regapp.client.HandlingResponse;
 import org.eclipse.cargotrakcer.regapp.util.DateUtil;
 import tornadofx.control.DateTimePicker;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
 import java.awt.*;
 import java.io.IOException;
 import java.net.ConnectException;

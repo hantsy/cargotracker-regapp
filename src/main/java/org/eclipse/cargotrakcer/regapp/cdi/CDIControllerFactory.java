@@ -2,9 +2,9 @@ package org.eclipse.cargotrakcer.regapp.cdi;
 
 import javafx.util.Callback;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Instance;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Instance;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class CDIControllerFactory implements Callback<Class<?>, Object> {

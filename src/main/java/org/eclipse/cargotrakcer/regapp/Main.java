@@ -35,6 +35,6 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         LOGGER.log(Level.INFO, "fires StageReadyEvent.");
         // start primary stage.
-        container.getBeanManager().fireEvent(stage, StageReadyEvent.Literal);
+        container.getBeanManager().getEvent().select(StageReadyEvent.Literal).fire(stage);
     }
 }

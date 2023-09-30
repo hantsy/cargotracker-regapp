@@ -3,9 +3,9 @@ package org.eclipse.cargotrakcer.regapp.cdi;
 import javafx.util.Callback;
 import net.rgielen.fxweaver.core.FxWeaver;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Disposes;
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Disposes;
+import jakarta.enterprise.inject.Produces;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
