@@ -27,6 +27,8 @@ Execute the following command to build and run the application.
 mvn clean compile exec:java
 ```
 
+When testing the functionality locally, you have to run cargotracker firstly, check [CargoTracker Getting Started Guide](https://github.com/eclipse-ee4j/cargotracker/#getting-started).
+
 ## References
 
 * [JavaFX and CDI: How to Inject many Stages](https://stackoverflow.com/questions/47591527/javafx-and-cdi-how-to-inject-many-stages)
