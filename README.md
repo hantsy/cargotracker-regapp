@@ -27,7 +27,9 @@ Execute the following command to build and run the application.
 mvn clean compile exec:java
 ```
 
-When testing the functionality on your local machine, you have to run cargotracker firstly, check [CargoTracker Getting Started Guide](https://github.com/eclipse-ee4j/cargotracker/#getting-started). If you are trying to run it against a running cargotracker deployed to AWS, etc, please setup an environment variable [HANDLING_REPORT_SERVICE_URL](https://github.com/hantsy/cargotracker-regapp/blob/master/src/main/java/org/eclipse/cargotrakcer/regapp/client/internal/HttpClientHandlingReportService.java#L47C55-L47C82) to locate the full path of the handling events RESTful API.
+When testing the functionality on your local machine, you have to run cargotracker firstly, check [CargoTracker Getting Started Guide](https://github.com/eclipse-ee4j/cargotracker/#getting-started). 
+
+If you are trying to run it against a running cargotracker deployed to AWS, etc, please setup an environment variable [HANDLING_REPORT_SERVICE_URL](https://github.com/hantsy/cargotracker-regapp/blob/master/src/main/java/org/eclipse/cargotrakcer/regapp/client/internal/HttpClientHandlingReportService.java#L47C55-L47C82) to locate the full path of the handling events RESTful API.
 
 ## References
 
