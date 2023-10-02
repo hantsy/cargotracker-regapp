@@ -1,14 +1,14 @@
 # CargoTracker RegApp
 
-[The original DDD sample regapp](https://github.com/citerus/dddsample-regapp) is written in Swing and Spring. 
+[The original DDD book sample regapp](https://github.com/citerus/dddsample-regapp) was written in Swing and Spring. 
 
-This app is used for submitting handling events to the [cargotracker core system](https://github.com/hantsy/cargotracker) (forked from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
+This app is a Java FX Client used for submitting handling events to the [cargotracker core system](https://github.com/hantsy/cargotracker) (forked from [eclipse-ee4j/cargotracker](https://github.com/eclipse-ee4j//cargotracker)).
 
 * Rebuilding the whole UI with JavaFX 
 * Using CDI(JBoss Weld) as IOC container
 * The communication between client and server is switched to Jakarta Restful Service(JAX-RS)
 
-<img src="./preview.png" alt="preview" style="width:800px;hight:600px;box-shadow: 0 4px 8px 0 rgba(0, 0,  0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align:center;" />
+<img src="./preview.png" alt="preview" style="width:600px;hight:480px;box-shadow: 0 4px 8px 0 rgba(0, 0,  0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);text-align:center;" />
 
 ## Prerequisites
 
