@@ -19,7 +19,7 @@
         <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
-        <javafx-maven-plugin.version>0.0.5</javafx-maven-plugin.version>
+        <javafx-maven-plugin.version>0.0.8</javafx-maven-plugin.version>
 
         <!-- dependencies -->
         <weld.version>5.1.1.SP2</weld.version>
