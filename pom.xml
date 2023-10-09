@@ -26,7 +26,7 @@
         <javafx.version>21</javafx.version>
         <weld-junit5.version>4.0.0.Final</weld-junit5.version>
         <wiremock.version>2.35.1</wiremock.version>
-        <byte-buddy.version>1.14.8</byte-buddy.version>     
+        <byte-buddy.version>1.14.9</byte-buddy.version>     
 
     </properties>
 
