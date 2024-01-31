@@ -1,0 +1,117 @@
+repo_name: hantsy/cargotracker-regapp
+report_id: d333df77ca9294185ca1fac64e511b1b
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T09:19:14+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 9
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/.github/workflows/maven.yml
+  detection_source: ".github/workflows/maven.yml"
+  last_updated_by: Hantsy Bai
+  last_updated_on: 2023-09-30 12:41:26.000000000 Z
+- name: net.bytebuddy:byte-buddy
+  description: Byte Buddy is a Java library for creating Java classes at run time
+  version: 1.14.11
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-12-25 16:05:11.000000000 Z
+- name: net.bytebuddy:byte-buddy-agent
+  description: The Byte Buddy agent offers convenience for attaching an agent to the
+    local or a remote VM
+  version: 1.14.11
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-12-25 16:05:11.000000000 Z
+- name: org.assertj:assertj-core
+  description: Rich and fluent assertions for testing for Java
+  version: 3.25.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2023-09-30 12:32:03.000000000 Z
+- name: org.junit.jupiter:junit-jupiter
+  description: Module "junit-jupiter" of JUnit 5
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-06 16:26:23.000000000 Z
+- name: org.mockito:mockito-junit-jupiter
+  description: Mockito JUnit 5 support
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/cargotracker-regapp/blob/master/pom.xml
+  detection_source: pom.xml
+  last_updated_by: dependabot[bot]
+  last_updated_on: 2023-11-06 16:26:23.000000000 Z
