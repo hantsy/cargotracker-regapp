@@ -34,7 +34,7 @@
         <tornadofx-controls.version>1.0.6</tornadofx-controls.version>
         <javafx-weaver-core.version>1.3.0</javafx-weaver-core.version>
         <junit.version>5.10.2</junit.version>
-        <mockito.version>5.11.0</mockito.version>
+        <mockito.version>5.12.0</mockito.version>
     </properties>
 
     <dependencyManagement>
