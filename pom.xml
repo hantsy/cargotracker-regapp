@@ -26,7 +26,7 @@
         <javafx.version>21.0.2</javafx.version>
         <weld-junit5.version>4.0.3.Final</weld-junit5.version>
         <wiremock.version>3.6.0</wiremock.version>
-        <byte-buddy.version>1.14.13</byte-buddy.version>
+        <byte-buddy.version>1.14.17</byte-buddy.version>
 
         <assertj-core.version>3.25.3</assertj-core.version>
         <yasson.version>3.0.3</yasson.version>
