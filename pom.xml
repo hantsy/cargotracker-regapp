@@ -31,7 +31,7 @@
         <yasson.version>3.0.4</yasson.version>
         <jakarta.json.bind-api.version>3.0.1</jakarta.json.bind-api.version>
         <tornadofx-controls.version>1.0.6</tornadofx-controls.version>
-        <javafx-weaver-core.version>2.0.0</javafx-weaver-core.version>
+        <javafx-weaver-core.version>2.0.1</javafx-weaver-core.version>
         <junit.version>5.11.0</junit.version>
         <mockito.version>5.13.0</mockito.version>
     </properties>
